@@ -1,0 +1,96 @@
+* {
+    /* outline: 1px solid rgb(235, 14, 14) !important; */
+    /* box-sizing: border-box; */
+  }
+
+body {
+  background-color: #cadaba;
+}
+
+input {
+  display: none;
+}
+
+img {
+  width: 50%;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+}
+
+.slides {
+  display: flex;
+  overflow: hidden;
+  width: 500%;
+}
+
+.slide__box_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+}
+
+.footer__text {
+  overflow: hidden;
+  /* display: flex; */
+}
+
+.footer__text_item {
+  /* width: 30%; */
+}
+
+.footer__buttons label {
+  display: inline-block;
+  /* display: flex; */
+  /* flex-direction: column; */
+  background-color: black;
+  border-radius: 50%;
+  margin: 10px;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+}
+
+.footer__buttons label .click {
+  padding: 15px;
+}
+
+#mem-1:checked ~ .slides {
+  margin-left: 0;
+}
+#mem-2:checked ~ .slides {
+  margin-left: -100%;
+}
+#mem-3:checked ~ .slides {
+  margin-left: -200%;
+}
+#mem-4:checked ~ .slides {
+  margin-left: -300%;
+}
+
+#mem-1:checked ~ .footer__text {
+  margin-left: 0;
+}
+#mem-2:checked ~ .footer__text {
+  margin-left: -100%;
+}
+#mem-3:checked ~ .footer__text {
+  margin-left: -200%;
+}
+#mem-4:checked ~ .footer__text {
+  margin-left: -300%;
+}
