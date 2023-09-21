@@ -1,8 +1,7 @@
 * {
-    outline: 1px solid rgb(235, 14, 14) !important;
+    /* outline: 1px solid rgb(235, 14, 14) !important; */
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
   }
 
 html {
@@ -25,15 +24,13 @@ img {
 }
 
 label {
-  padding: 0.6rem;
+  padding: 0.8rem;
   cursor: pointer;
   margin: auto 0;
   border-radius: 50%;
-  border: 0.1rem solid transparent;
 }
 
 .wrapper {
-  margin: 0 auto;
   padding: 2rem;
 }
 
@@ -74,11 +71,12 @@ label {
 
 .footer__text_item {
   min-width: 27rem;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   font-weight: 700;
   letter-spacing: 0.08rem;
   transition: all 0.5s;
   cursor: pointer;
+  color: darkgreen;
 }
 
 .footer__buttons {
@@ -90,34 +88,55 @@ label {
   display: block;
   width: 2rem;
   height: 2rem;
-  background-color: black;
-
+  background-color: green;
   border-radius: 50%;
-  transition: all 0.5s;
+  transition: all 0.2s;
+}
+.click:hover {
+  background-color: chocolate;
+}
+.click:active {
+  background-color: darkseagreen;
+}
+.click:focus {
+  background-color: brown;
 }
 
-  #mem-1:checked ~ .slides .image {
-    transform: translateX(0%);
+  #mem-1:checked ~ .footer #btn-1,
+  #mem-2:checked ~ .footer #btn-2,
+  #mem-3:checked ~ .footer #btn-3,
+  #mem-4:checked ~ .footer #btn-4 {
+    background-color: teal;
   }
-  #mem-2:checked ~ .slides .image {
-    transform: translateX(-100%);
-  }
-  #mem-3:checked ~ .slides .image {
-    transform: translateX(-200%);
-  }
-  #mem-4:checked ~ .slides .image {
-    transform: translateX(-300%);
-  }
+
+
+  #mem-1:checked ~ .slides .image,
   #mem-1:checked ~ .footer .footer__text .footer__text_item {
     transform: translateX(0%);
   }
+  #mem-2:checked ~ .slides .image,
   #mem-2:checked ~ .footer .footer__text .footer__text_item {
     transform: translateX(-100%);
   }
+  #mem-3:checked ~ .slides .image,
   #mem-3:checked ~ .footer .footer__text .footer__text_item {
     transform: translateX(-200%);
   }
+  #mem-4:checked ~ .slides .image,
   #mem-4:checked ~ .footer .footer__text .footer__text_item {
     transform: translateX(-300%);
   }
 
+  @media (max-width: 767px) {
+    .footer {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+    }
+    .footer__text_item {
+      text-align: start;
+      min-width: 80vw;
+    }
+  }
